@@ -37,14 +37,14 @@ models -->
 
 runs -->
   detect -->
-  predict -->
-  - labels
-  - images
-  train -->
-  - weights
-  - training metrics
-  val -->
-  - validation metrics
+predict -->
+- labels
+- images
+train -->
+- weights
+- training metrics
+val -->
+- validation metrics
 
 src -->
   utils -->
