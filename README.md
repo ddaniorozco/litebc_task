@@ -74,6 +74,8 @@ pip install -r notebooks/requirements.txt
 4. **Inference**: Use the trained model to perform inference on new images. Also use (`notebooks/capillary_detection.ipynb`) for inference and visualization.
 
 5. **Evaluation**: The output of the inference and visualization will be saved in a directory with the format shown in `runs`. Evaluate the performance of the trained model analyzing those metrics.
+   
+6. **Analyzing detections**: Analyze the best detections based on their size and class with `save_best_detections.py`
 
 
 
