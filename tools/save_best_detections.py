@@ -11,11 +11,9 @@ def calculate_average_bbox_size(label_file, image_width, image_height):
     for line in lines:
         class_id, x_center_norm, y_center_norm, bbox_width_norm, bbox_height_norm = map(float, line.strip().split())
 
-        # Filter out detections for class "1"
         if int(class_id) != 1:
             continue
 
-        # Scale normalized coordinates to pixel values
         bbox_width = bbox_width_norm * image_width
         bbox_height = bbox_height_norm * image_height
 
@@ -45,7 +43,7 @@ def calculate_deviation(value, average_value):
 def select_best_detections(label_file, output_folder, image_width, image_height):
     average_width, average_height, average_area = calculate_average_bbox_size(label_file, image_width, image_height)
 
-    deviation_threshold = 0.1  # You can adjust this threshold as needed
+    deviation_threshold = 0.1
 
     selected_detections = []
 
@@ -55,19 +53,14 @@ def select_best_detections(label_file, output_folder, image_width, image_height)
     for line in lines:
         class_id, x_center_norm, y_center_norm, bbox_width_norm, bbox_height_norm = map(float, line.strip().split())
 
-        # Filter out detections for class "1"
         if int(class_id) != 1:
             continue
 
-        # Scale normalized coordinates to pixel values
-        # x_center = x_center_norm * image_width
-        # y_center = y_center_norm * image_height
         bbox_width = bbox_width_norm * image_width
         bbox_height = bbox_height_norm * image_height
 
         bbox_area = bbox_width * bbox_height
 
-        # Calculate deviation from average area
         area_deviation = calculate_deviation(bbox_area, average_area)
 
         if area_deviation <= deviation_threshold:
@@ -79,7 +72,6 @@ def select_best_detections(label_file, output_folder, image_width, image_height)
 
         return selected_detections
 
-    # Save selected detections to a new file in the output folder
     filename = os.path.basename(label_file)
     output_file = os.path.join(output_folder, filename)
     with open(output_file, 'w') as f:
@@ -99,7 +91,7 @@ def process_directory(input_folder, output_folder, image_width, image_height):
 
 input_folder = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/labels_testing/'
 output_folder = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/results_labels_average/'
-images_width = 1368  # Replace with the width of your images
-images_height = 1216  # Replace with the height of your images
+images_width = 1368
+images_height = 1216
 
 process_directory(input_folder, output_folder, images_width, images_height)
