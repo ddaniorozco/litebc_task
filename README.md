@@ -16,24 +16,24 @@ Furthermore allows to filter and select the best detections of sharp cappilaries
 ## Project Structure
 
 notebooks -->
-- capillary_detection.ipynb
-- requirements.txt
+- `capillary_detection.ipynb`
+- `requirements.txt`
 
 data -->
   annotations -->
-  - train.txt
-  - test.txt
-  - validation.txt
+  - `train.txt`
+  - `test.txt`
+  - `validation.txt`
   
   images -->
   - train
   - test
   - validation
 
-capillary.yaml
+`capillary.yaml`
     
 models -->
-- random_yolo.pt
+- `random_yolo.pt`
 
 runs -->
   detect -->
@@ -50,10 +50,10 @@ val -->
 - validation metrics
 
 tools -->
-- split_train_test_val.py
-- save_best_detections.py
-- check_labels.py
-- save_paths.py
+- `split_train_test_val.py`
+- `save_best_detections.py`
+- `check_labels.py`
+- `save_paths.py`
 
 
 ## Installation
