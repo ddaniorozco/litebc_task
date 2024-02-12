@@ -25,9 +25,9 @@ notebooks -->
 
 data -->
   annotations -->
-    - train.txt
-    - test.txt
-    - validation.txt
+  - train.txt
+  - test.txt
+  - validation.txt
 
     
 ├── data/
