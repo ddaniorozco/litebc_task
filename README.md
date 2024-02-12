@@ -23,6 +23,13 @@ notebooks -->
 - capillary_detection.ipynb
 - requirements.txt
 
+data -->
+  annotations -->
+    - train.txt
+    - test.txt
+    - validation.txt
+
+    
 ├── data/
 │ ├── annotations/
 │ │ ├── train.txt
