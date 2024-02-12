@@ -17,9 +17,9 @@ Capillary detection plays a crucial role in various medical applications, partic
 
 ## Project Structure
 
-Capillary-Detection
+Capillary Detection
 
-notebooks/
+notebooks /
 capillary_detection.ipynb
 requirements.txt
 
