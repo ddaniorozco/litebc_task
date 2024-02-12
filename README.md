@@ -6,7 +6,6 @@
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 
 ## Introduction
 
@@ -65,7 +64,7 @@ pip install -r notebooks/requirements.txt
 
 ## Usage
 
-1. ** Check Dataset**: Clean and go over the images and annotations using check_labels.py or https://github.com/HumanSignal/labelImg
+1. **Check Dataset**: Clean and go over the images and annotations using check_labels.py or https://github.com/HumanSignal/labelImg
    
 2. **Data Preparation**: Split and annotate the images and annotations using the YOLO format using split_train_test_val.py and save_paths.py. Update the `data/capillary.yaml` file with dataset information.
 
