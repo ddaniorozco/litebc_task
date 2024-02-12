@@ -15,8 +15,6 @@ Furthermore allows to filter and select the best detections of sharp cappilaries
 
 ## Project Structure
 
-Capillary Detection
-
 notebooks -->
 - capillary_detection.ipynb
 - requirements.txt
@@ -31,6 +29,7 @@ data -->
   - train
   - test
   - validation
+
 capillary.yaml
     
 models -->
