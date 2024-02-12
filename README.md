@@ -69,7 +69,7 @@ pip install -r notebooks/requirements.txt
    
 2. **Data Preparation**: Split and annotate the images and annotations using the YOLO format using `split_train_test_val.py` and `save_paths.py`. Update the `data/capillary.yaml` file with dataset information.
 
-3. **Training**: Run the training scripts in `notebooks/capillary_detection.ipynb` to train the YOLO model using the provided data.
+3. **Training**: Run the training scripts in `notebooks/capillary_detection.ipynb` to train the YOLO model using the provided data. https://github.com/ultralytics/ultralytics/tree/main
 
 4. **Inference**: Use the trained model to perform inference on new images. Also use (`notebooks/capillary_detection.ipynb`) for inference and visualization.
 
