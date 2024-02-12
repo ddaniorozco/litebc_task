@@ -1,5 +1,6 @@
 import os
 
+
 def save_image_paths(folder_path, output_file):
     with open(output_file, 'w') as f:
         for root, _, files in os.walk(folder_path):
@@ -7,8 +8,7 @@ def save_image_paths(folder_path, output_file):
                 if file.endswith('.jpg') or file.endswith('.png'):
                     file_path = os.path.join(root, file)
                     f.write(file_path + '\n')
-
-if __name__ == "__main__":
-    folder_path = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/data'
-    output_file = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/txt_files/train.txt'
-    save_image_paths(folder_path, output_file)
+                    
+folder_path = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/data'
+output_file = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/small_test/txt_files/train.txt'
+save_image_paths(folder_path, output_file)
