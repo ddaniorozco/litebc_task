@@ -49,14 +49,12 @@ train -->
 val -->
 - validation metrics
 
-src -->
-  utils -->
-  - split_train_test_val.py
-  - save_best_detections.py
-  - check_labels.py
-  - save_paths.py
+tools -->
+- split_train_test_val.py
+- save_best_detections.py
+- check_labels.py
+- save_paths.py
 
-README.md
 
 ## Installation
 
