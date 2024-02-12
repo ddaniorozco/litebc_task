@@ -28,7 +28,11 @@ data -->
   - train.txt
   - test.txt
   - validation.txt
-
+  images -->
+  - train
+  - test
+  - validation
+capillary.yaml
     
 ├── data/
 │ ├── annotations/
