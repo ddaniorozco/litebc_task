@@ -18,8 +18,6 @@ def visualize_labels(image_folder, label_folder, class_names):
         image_name = os.path.splitext(image_file)[0]
         print(f"Image: {image_name}")
 
-        class_count = {class_name: 0 for class_name in class_names}
-
         with open(label_path, 'rb') as f:
             lines = f.readlines()
 
@@ -51,25 +49,14 @@ def visualize_labels(image_folder, label_folder, class_names):
             class_name = class_names[int(class_id)]
             cv2.putText(image, class_name, (x_min, y_min - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
-            # Count class occurrences
-            class_count[class_name] += 1
-
         # Display image with bounding boxes
-        # cv2.imshow(f'Image: {image_name}', image)
-        # cv2.waitKey(0)
-        # cv2.destroyAllWindows()
-
-        # Print class counts
-        print("Class Counts:")
-        for class_name, count in class_count.items():
-            print(f"{class_name}: {count}")
+        cv2.imshow(f'Image: {image_name}', image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
 
-# Example usage
-image_folder_path = '/Users/daniorozco/Desktop/liteBC/capillary_detection/images'
-label_folder_path = '/Users/daniorozco/Desktop/liteBC/capillary_detection/labels'
+image_folder_path = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/images'
+label_folder_path = '/Users/daniorozco/Desktop/litebc_task/capillary_detection/labels'
 classes_names = ['BLURRY', 'SHARP', 'BUBBLE']
-
-# {"label_map": {"SHARP_0": 1, "BLURRY": 0, "BUBBLE": 2}, "dataset_split": null}
 
 visualize_labels(image_folder_path, label_folder_path, classes_names)
