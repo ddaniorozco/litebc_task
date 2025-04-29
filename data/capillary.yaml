@@ -1,8 +1,0 @@
-names:
-  0: BLURRY
-  1: SHARP_0
-  2: BUBBLE
-path: /content/capillary/split/txt_files
-test: test.txt
-train: train.txt
-val: validation.txt
